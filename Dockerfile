@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN sed --in-place 's/main/main contrib non-free/' /etc/apt/sources.list
 RUN apt-get update && \
     apt-get -y --no-install-recommends install \
+        curl \
         openssh-server \
         runit && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
