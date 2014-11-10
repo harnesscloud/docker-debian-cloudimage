@@ -5,9 +5,9 @@
 if [ -d /etc/my_init.d ]; then
     ls /etc/my_init.d/* | sort | while read SCRIPT; do
         if [ -x ${SCRIPT} ]; then
-            ${SCRIPT} &
+            ${SCRIPT}
         else
-            /bin/bash ${SCRIPT} &
+            /bin/bash ${SCRIPT}
         fi
     done
 fi
