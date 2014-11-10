@@ -1,4 +1,4 @@
-FROM debian:squeeze
+FROM debian:wheezy
 MAINTAINER Mark Stillwell <mark@stillwell.me>
 
 ENV DEBIAN_FRONTEND noninteractive
