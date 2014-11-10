@@ -20,5 +20,6 @@ while [ ! -f /root/.ssh/authorized_keys ] && [ ${ATTEMPTS} -gt 0 ]; do
     echo
     echo "********************************************************"
   fi
+  sleep 1
 done
 rm -f ${TMPFILE}
