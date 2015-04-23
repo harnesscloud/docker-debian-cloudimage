@@ -2,7 +2,8 @@ FROM debian:wheezy
 MAINTAINER Mark Stillwell <mark@stillwell.me>
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN sed --in-place 's/main/main contrib non-free/' /etc/apt/sources.list
+RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list &&
+    sed -i 's/http.debian.net/ftp.fr.debian.org/' /etc/apt/sources.list
 RUN apt-get update && \
     apt-get -y --no-install-recommends install \
         curl \
