@@ -3,7 +3,7 @@ MAINTAINER Mark Stillwell <mark@stillwell.me>
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list && \
-    sed -i 's/http.debian.net/ftp.fr.debian.org/' /etc/apt/sources.list
+    sed -i 's/httpredir.debian.org/ftp.debian.org/' /etc/apt/sources.list
 RUN apt-get update && \
     apt-get -y --no-install-recommends install \
         curl \
