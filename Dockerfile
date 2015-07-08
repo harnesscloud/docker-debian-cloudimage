@@ -11,7 +11,6 @@ RUN apt-get update && \
         runit && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
-
 RUN mkdir -p /etc/service/sshd && \
     echo '#!/bin/sh\nmkdir -p /var/run/sshd\nexec /usr/sbin/sshd -D' \
         > /etc/service/sshd/run && \
