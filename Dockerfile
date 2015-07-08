@@ -27,4 +27,3 @@ RUN chmod 0755 /sbin/my_init
 EXPOSE 22
 
 CMD [ "/sbin/my_init" ]
-
